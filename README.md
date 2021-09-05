@@ -12,3 +12,5 @@
   2、自定义BasicEnumTypeAdapter(实现TypeAdapter#write,TypeAdapter#read)<br>
     逻辑：将所有实现了BasicEnum的枚举类(如StatusEnum)序列化为类似于{"value":"1","desc":"初始化"}这种包含value、desc的json串)<br>
   3、使用GsonBuilder#registerTypeAdapterFactory注册BasicEnumTypeAdapterFactory
+ 
+ #### 测试类：EnumSerializeDeserializeTest
