@@ -3,6 +3,7 @@ Serialization and deserialization of custom enum types ,based on gson(基于gson
 
 需求背景如下：
 将枚举元素序列化为带有值和说明(value/desc)的json串，反序列化则基于值(value)进行匹配
+
 (如：实体类:OrderDO{orderNo="202109050001", status=StatusEnum.PENDING} <-->  json串:{"orderNo":"202109050001","status":{"value":2,"desc":"处理中"}})
 
 问题：由于gson的JsonSerializer、JsonDeserializer只支持单个具体类型，如果有多个enum类型，就得实现多个JsonSerializer、JsonDeserializer，并注册多次，只能寻找其他解决方式
